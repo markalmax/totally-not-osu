@@ -7,7 +7,7 @@ public class BMImporter : MonoBehaviour
     public TextAsset OSUFile;
     public string[] OSULines = new string[0];
     public Dictionary<string, string> metadata = new Dictionary<string, string>();
-    void Start()
+    void Awake()
     {
         OSULines = OSUFile.text.Split('\n');
         for(int i = 0; i < OSULines.Length; i++)
@@ -19,7 +19,8 @@ public class BMImporter : MonoBehaviour
                 if(split[0].Trim()=="SliderTickRate")break;
             }
         }
-        Debug.Log(metadata["Title"] + " " + metadata["Artist"] + " " + metadata["Creator"] + " " + metadata["Version"]);
+        //Debug.Log(metadata["Title"] + " " + metadata["Artist"] + " " + metadata["Creator"] + " " + metadata["Version"]);
+        //Debug.Log(metadata["CircleSize"] + " " + metadata["OverallDifficulty"] + " " + metadata["ApproachRate"]);
     }
     void Update()
     {

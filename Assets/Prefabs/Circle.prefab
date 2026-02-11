@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3403685850172896552}
   - component: {fileID: 2362831931956464089}
+  - component: {fileID: 7365177747769174128}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -90,3 +91,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7365177747769174128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102448535606032360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d584ad63fcc09342ba47fec1966d0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitCircle
+  CS: 0
+  OD: 0
+  AR: 0

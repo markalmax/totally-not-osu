@@ -7,11 +7,17 @@ public class HitCircle : MonoBehaviour
     void Start()
     {
         BM=GetComponentInParent<BMImporter>();
-        Debug.Log(BM.metadata["CircleSize"] + " " + BM.metadata["OverallDifficulty"] + " " + BM.metadata["ApproachRate"]);
-        CS = float.Parse(BM.metadata["CircleSize"]);
-        OD = float.Parse(BM.metadata["OverallDifficulty"]);
-        AR = float.Parse(BM.metadata["ApproachRate"]);
-        transform.localScale = Vector3.one * (54.4f - 4.48f * CS) * 1.00041f;
-        Debug.Log(CS + " " + OD + " " + AR);
+        if(BM.metadata.ContainsKey("Difficulty"))
+        {
+            CS = float.Parse(BM.metadata["Difficulty"]["CircleSize"]);
+            OD = float.Parse(BM.metadata["Difficulty"]["OverallDifficulty"]);
+            AR = float.Parse(BM.metadata["Difficulty"]["ApproachRate"]);
+            transform.localScale = Vector3.one * (54.4f - 4.48f * CS) * 1.00041f;
+            Debug.Log(CS + " " + OD + " " + AR);
+        }
+        else
+        {
+            Debug.LogError("Difficulty section not found in OSU file metadata!");
+        }
     }
 }

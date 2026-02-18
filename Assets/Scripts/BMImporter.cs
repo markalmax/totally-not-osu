@@ -44,8 +44,8 @@ public class BMImporter : MonoBehaviour
                 }
                 if(header == "HitObjects")
                 {
-                    string[] HitObjectsStructure={"x","y","time","type","hitSound","objectParams","hitSample"};
-                    for(int j = 0; j < split.Length; j++){
+                    string[] HitObjectsStructure={"x","y","time","type","hitSound"};
+                    for(int j = 0; j < HitObjectsStructure.Length; j++){
                         Debug.Log("[" + header + "]\n" + HitObjectsStructure[j].Trim() +cntr + " : " + split[j].Trim());
                         metadata[header].Add(HitObjectsStructure[j].Trim()+cntr, split[j].Trim());
                     }

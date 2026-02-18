@@ -20,4 +20,8 @@ public class HitCircle : MonoBehaviour
             Debug.LogError("Difficulty section not found in OSU file metadata!");
         }
     }
+    void OnMouseDown()
+    {
+        Debug.Log("HitCircle Clicked");
+    }
 }

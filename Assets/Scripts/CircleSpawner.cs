@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class CircleSpawner : MonoBehaviour
 {
+    public GameObject circle;
     public BMImporter BM;
     public GameObject HitCircle;
     void Awake()
@@ -11,9 +12,6 @@ public class CircleSpawner : MonoBehaviour
     }
     void Start()
     {
-        foreach(KeyValuePair<string, string> hitObject in BM.metadata["HitObjects"])
-        {
-            
-        }
+        
     }
 }
